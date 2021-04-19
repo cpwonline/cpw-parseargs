@@ -10,6 +10,8 @@
  */
 
 
+#include <list>
+
 #ifndef ARGUMENT_H
 #define ARGUMENT_H
 
@@ -20,7 +22,10 @@ class Argument
 		virtual ~Argument();
 	
 	private:
-		/* add your private declarations */
+		bool have_value_;
+		bool multiple_values_;
+		Key* current_key_;
+		std::list<Value*>* values_colector_;
 };
 
 #endif /* ARGUMENT_H */ 
