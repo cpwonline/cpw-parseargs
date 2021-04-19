@@ -15,13 +15,18 @@
 
 CPWParseArgs::CPWParseArgs()
 {
-	
+	arguments_colector_ = new std::list<Argument*>;
+	current_parser_ = new Parser();
 }
-
 
 CPWParseArgs::~CPWParseArgs()
 {
+	for(it = arguments_colector_->begin(); it != arguments_colector_->end(); ++it)
+		delete *it;
+	delete arguments_colector_;
 	
+	delete current_parser_;
+}
 
 std::list<Argument*>* CPWParseArgs::get_arguments_colector() const
 {
