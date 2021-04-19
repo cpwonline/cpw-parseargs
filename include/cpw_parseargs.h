@@ -21,6 +21,15 @@ class CPWParseArgs
 	public:
 		CPWParseArgs();
 		virtual ~CPWParseArgs();
+		
+	public:
+		enum OperationType
+		{
+			kSeparate,
+			kSearchByKey,
+			kSearchByValue
+		}
+		
 	
 	private:
 		std::list<Argument*>* arguments_colector_;
