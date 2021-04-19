@@ -10,6 +10,8 @@
  */
 
 
+#include <list>
+
 #ifndef RESULT_H
 #define RESULT_H
 
@@ -20,7 +22,7 @@ class Result
 		virtual ~Result();
 	
 	private:
-		/* add your private declarations */
+		std::list<Argument*>* arguments_colector_;
 };
 
 #endif /* RESULT_H */ 
