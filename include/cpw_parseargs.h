@@ -30,6 +30,12 @@ class CPWParseArgs
 			kSearchByValue
 		}
 		
+	public:
+		std::list<Argument*>* get_arguments_colector() const;
+		Parser* get_current_parser() const;
+		
+	public:
+		Parser_(std::string string_to_parser, OperationType type);
 	
 	private:
 		std::list<Argument*>* arguments_colector_;

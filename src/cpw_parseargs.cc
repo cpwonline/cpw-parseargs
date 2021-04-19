@@ -22,5 +22,13 @@ CPWParseArgs::CPWParseArgs()
 CPWParseArgs::~CPWParseArgs()
 {
 	
+
+std::list<Argument*>* CPWParseArgs::get_arguments_colector() const
+{
+	return arguments_colector_;
 }
 
+Parser* CPWParseArgs::get_current_parser() const
+{
+	return current_parser_;
+}
