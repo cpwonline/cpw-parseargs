@@ -18,9 +18,27 @@ Parser::Parser()
 	
 }
 
-
 Parser::~Parser()
 {
 	
 }
 
+std::list<Argument*>* Parser::get_arguments_colector() const
+{
+	
+}
+
+std::list<Result*>* Parser::results_colector() const
+{
+	
+}
+
+Separator* Parser::get_current_separator() const
+{
+	
+}
+
+Comparator* Parser::get_current_comparator() const
+{
+	
+}

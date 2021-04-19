@@ -20,6 +20,12 @@ class Parser
 	public:
 		Parser();
 		virtual ~Parser();
+		
+	public:
+		std::list<Argument*>* get_arguments_colector() const;
+		std::list<Result*>* results_colector() const;
+		Separator* get_current_separator() const;
+		Comparator* get_current_comparator() const;
 	
 	private:
 		std::list<Argument*>* arguments_colector_;
