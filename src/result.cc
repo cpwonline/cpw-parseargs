@@ -18,9 +18,17 @@ Result::Result()
 	
 }
 
-
 Result::~Result()
 {
 	
 }
 
+std::list<Argument*>* Result::get_arguments_colector() const
+{
+	return arguments_colector_;
+}
+
+void Result::set_arguments_colector(std::list<Argument*>* arguments_colector)
+{
+	arguments_colector_ = arguments_colector;
+}

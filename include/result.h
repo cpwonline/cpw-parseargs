@@ -20,6 +20,12 @@ class Result
 	public:
 		Result();
 		virtual ~Result();
+		
+	public:
+		std::list<Argument*>* get_arguments_colector() const;
+		
+	public:
+		void set_arguments_colector(std::list<Argument*>* arguments_colector);
 	
 	private:
 		std::list<Argument*>* arguments_colector_;
