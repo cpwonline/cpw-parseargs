@@ -20,6 +20,16 @@ class Argument
 	public:
 		Argument();
 		virtual ~Argument();
+		
+	public:
+		bool get_have_value() const;
+		bool get_multiple_values() const;
+		Key* get_current_key() const;
+		std::list<Value*>* get_values_colector() const;
+		
+	public:
+		void set_have_value(bool have_value);
+		void set_multiple_values(bool multiple_values);
 	
 	private:
 		bool have_value_;
