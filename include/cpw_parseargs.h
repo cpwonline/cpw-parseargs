@@ -10,6 +10,9 @@
  */
 
 
+#include <list>
+#include <string>
+
 #ifndef CPW_PARSEARGS_H
 #define CPW_PARSEARGS_H
 
@@ -20,7 +23,8 @@ class CPWParseArgs
 		virtual ~CPWParseArgs();
 	
 	private:
-		/* add your private declarations */
+		std::list<Argument*>* arguments_colector_;
+		Parser* current_parser_;
 };
 
 #endif /* CPW_PARSEARGS_H */ 
