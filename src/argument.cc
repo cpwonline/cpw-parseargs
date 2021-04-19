@@ -15,13 +15,17 @@
 
 Argument::Argument()
 {
-	
+	current_key_ = new Key();
+	values_colector_ = new std::list<Value*>;
 }
-
 
 Argument::~Argument()
 {
-	
+	for(it = values_colector_->begin(); it != values_colector_->end; ++it)
+	{
+		delete *it;
+	}
+	delete values_colector_;
 }
 
 bool Argument::get_have_value() const
