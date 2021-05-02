@@ -20,7 +20,7 @@ class Separator
 		virtual ~Separator();
 	
 	private:
-		/* add your private declarations */
+		std::string string_to_compare_;
 };
 
 #endif /* SEPARATOR_H */ 
