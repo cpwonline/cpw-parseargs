@@ -21,6 +21,10 @@ class Value
 	public:
 		Value();
 		virtual ~Value();
+		
+		std::string get_content() const;
+		
+		void set_content(std::string content);
 	
 	private:
 		std::string content_;

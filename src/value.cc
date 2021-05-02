@@ -18,9 +18,17 @@ Value::Value()
 	
 }
 
-
 Value::~Value()
 {
 	
 }
 
+std::string Value::get_content() const
+{
+	return content_;
+}
+
+void Value::set_content(std::string content)
+{
+	content_ = content;
+}
