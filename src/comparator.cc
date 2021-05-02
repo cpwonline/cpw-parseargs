@@ -18,9 +18,17 @@ Comparator::Comparator()
 	
 }
 
-
 Comparator::~Comparator()
 {
 	
 }
 
+std::string Comparator::get_string_to_compare() const
+{
+	
+}
+
+void Comparator::set_string_to_compare(std::string string_to_compare)
+{
+	
+}
