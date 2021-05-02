@@ -18,9 +18,18 @@ Separator::Separator()
 	
 }
 
-
 Separator::~Separator()
 {
 	
+}
+
+std::string Separator::get_string_to_compare() const
+{
+	return string_to_compare_;
+}
+
+void Separator::set_string_to_compare(std::string string_to_compare)
+{
+	string_to_compare_ = string_to_compare;
 }
 

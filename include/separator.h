@@ -19,6 +19,12 @@ class Separator
 		Separator();
 		virtual ~Separator();
 	
+	public:
+		std::string get_string_to_compare() const;
+	
+	public:
+		void set_string_to_compare(std::string string_to_compare);
+		
 	private:
 		std::string string_to_compare_;
 };
