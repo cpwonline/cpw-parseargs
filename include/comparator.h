@@ -10,6 +10,8 @@
  */
 
 
+#include <string>
+
 #ifndef COMPARATOR_H
 #define COMPARATOR_H
 
@@ -20,7 +22,7 @@ class Comparator
 		virtual ~Comparator();
 	
 	private:
-		/* add your private declarations */
+		std::string string_to_compare_;
 };
 
 #endif /* COMPARATOR_H */ 
