@@ -10,6 +10,9 @@
  */
 
 
+#include <string>
+
+
 #ifndef VALUE_H
 #define VALUE_H
 
@@ -20,7 +23,7 @@ class Value
 		virtual ~Value();
 	
 	private:
-		/* add your private declarations */
+		std::string content_;
 };
 
 #endif /* VALUE_H */ 
