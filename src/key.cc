@@ -18,9 +18,17 @@ Key::Key()
 	
 }
 
-
 Key::~Key()
 {
 	
 }
 
+std::string Key::get_content() const
+{
+	return content_;
+}
+
+void Key::set_content(std::string content)
+{
+	content_ = content;
+}
