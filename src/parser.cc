@@ -25,20 +25,20 @@ Parser::~Parser()
 
 std::list<Argument*>* Parser::get_arguments_colector() const
 {
-	
+	return arguments_colector_;
 }
 
-std::list<Result*>* Parser::results_colector() const
+std::list<Result*>* Parser::get_results_colector() const
 {
-	
+	return results_colector_;
 }
 
 Separator* Parser::get_current_separator() const
 {
-	
+	return current_separator_;
 }
 
 Comparator* Parser::get_current_comparator() const
 {
-	
+	return current_comparator_;
 }
