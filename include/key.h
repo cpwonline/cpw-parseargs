@@ -13,6 +13,10 @@
 #ifndef KEY_H
 #define KEY_H
 
+
+#include <string>
+
+
 class Key
 {
 	public:
@@ -20,7 +24,7 @@ class Key
 		virtual ~Key();
 	
 	private:
-		/* add your private declarations */
+		std::string content_;
 };
 
 #endif /* KEY_H */ 
