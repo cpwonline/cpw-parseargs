@@ -37,3 +37,23 @@ Parser* CPWParseArgs::get_current_parser() const
 {
 	return current_parser_;
 }
+
+void CPWParseArgs::Parser_(std::string string_to_parser, CPWParseArgs::OperationType type)
+{
+	switch(type)
+	{
+		case CPWParseArgs::kSeparate:
+		{
+			current_parser_->Separate_(string_to_parser);
+			break;
+		}
+		case CPWParseArgs::kSearchByKey:
+		{
+			
+		}
+		case CPWParseArgs::kSearchByValue:
+		{
+			
+		}
+	}
+}

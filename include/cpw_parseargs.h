@@ -39,7 +39,7 @@ class CPWParseArgs
 		Parser* get_current_parser() const;
 		
 	public:
-		Parser_(std::string string_to_parser, OperationType type);
+		void Parser_(std::string string_to_parser, OperationType type);
 	
 	private:
 		std::list<Argument*>* arguments_colector_;
