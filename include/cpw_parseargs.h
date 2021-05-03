@@ -13,6 +13,10 @@
 #include <list>
 #include <string>
 
+#include "parser.h"
+#include "argument.h"
+
+
 #ifndef CPW_PARSEARGS_H
 #define CPW_PARSEARGS_H
 
@@ -28,7 +32,7 @@ class CPWParseArgs
 			kSeparate,
 			kSearchByKey,
 			kSearchByValue
-		}
+		};
 		
 	public:
 		std::list<Argument*>* get_arguments_colector() const;
