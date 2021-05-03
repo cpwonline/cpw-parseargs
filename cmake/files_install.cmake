@@ -3,16 +3,21 @@
 ## Project
 install(
 	TARGETS ${PROJECT_NAME} 
-	DESTINATION ${CMAKE_INSTALL_BINDIR}
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 ## Header files
 install(
 	FILES 
 		${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.h 
-		${HEADER}/library1.h
-		${HEADER}/library2.h
-		${HEADER}/object_library.h
+		${HEADER}/cpw_parseargs.h
+		${HEADER}/argument.h
+		${HEADER}/comparator.h
+		${HEADER}/key.h
+		${HEADER}/parser.h
+		${HEADER}/result.h
+		${HEADER}/separator.h
+		${HEADER}/value.h
 	DESTINATION 
 		${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
 )
@@ -20,8 +25,13 @@ install(
 ## Libraries
 install(
 	TARGETS 
-		library1
-		library2
+		argument
+		comparator
+		key
+		parser
+		result
+		separator
+		value
 	DESTINATION 
 		${CMAKE_INSTALL_LIBDIR}
 )
@@ -38,14 +48,6 @@ install(
 )
 
 ## Share files
-install(
-	FILES ${PROJECT_BINARY_DIR}/share/${PROJECT_NAME}.desktop
-	DESTINATION ${CMAKE_INSTALL_DATADIR}/applications
-)
-install(
-	FILES ${PROJECT_BINARY_DIR}/share/${PROJECT_NAME}/${PROJECT_NAME}.glade
-	DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}
-)
 install(
 	FILES ${PROJECT_BINARY_DIR}/share/${PROJECT_NAME}.pc
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
