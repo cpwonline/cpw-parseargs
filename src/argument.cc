@@ -21,7 +21,7 @@ Argument::Argument()
 
 Argument::~Argument()
 {
-	for(it = values_colector_->begin(); it != values_colector_->end; ++it)
+	for(auto it = values_colector_->begin(); it != values_colector_->end(); ++it)
 	{
 		delete *it;
 	}
