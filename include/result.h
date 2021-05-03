@@ -12,6 +12,9 @@
 
 #include <list>
 
+#include "argument.h"
+
+
 #ifndef RESULT_H
 #define RESULT_H
 
