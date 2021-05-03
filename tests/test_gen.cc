@@ -1,6 +1,9 @@
+#include <string>
 #include <iostream>
+
 #include "gtest/gtest.h"
-#include "library2.h"
+#include "cpw_parseargs.h"
+
 
 class TestGen : public ::testing::Test
 {
@@ -8,26 +11,33 @@ class TestGen : public ::testing::Test
 		void SetUp() override;
 		void TearDown() override;
 
-		Library2 *TestObj2_;
+		CPWParseArgs *TestObj_;
 };
 
 //-----------------------------------------------------------------------------
 
 void TestGen::SetUp()
 {
-	TestObj2_ = new Library2();
+	TestObj_ = new CPWParseArgs();
 }
 
 void TestGen::TearDown()
 {
-	delete TestObj2_;
+	delete TestObj_;
 }
 
 //-----------------------------------------------------------------------------
 
-TEST_F(TestGen, TestLib2)
+TEST_F(TestGen, SeparateBySpace)
 {
-	ASSERT_EQ("Hello!", TestObj2_->get_var1());
+	std::string command = "command --arg1 val1 -a2 -a3 --arg4 val2 --arg5=val5";
+	TestObj_->Parser_(command, CPWParseArgs::OperationType::kSeparate);
+	
+	auto temporal_results = TestObj_->get_current_parser()->get_current_separator()->get_temporal_results();
+	for(auto it = temporal_results.begin(); it != temporal_results.end(); ++it)
+	{
+		std::cout << "\nValue: " << *it;
+	}
 }
 
 
